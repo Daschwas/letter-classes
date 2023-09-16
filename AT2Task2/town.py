@@ -6,6 +6,6 @@ class Town:
 
     def add_residents(self, resident):
         self.residents.append(resident)
-    def add_post_offices(self, post_office):
-        self.post_office.append(post_office)
 
+    def add_post_offices(self, postoffice):
+        self.post_offices.append(postoffice)
