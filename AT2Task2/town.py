@@ -9,8 +9,9 @@ class Town:
     """
     def __init__(self, title):
         """
-        The only paramater specified is the name of the town.
-        The resident and post office lists dictate which residents and post offices are located in the town.
+        Parameters:
+            Title - The name of the town.
+            Residents/Post Offices - Lists that dictate which residents and post offices are located in the town.
         """
         self.title = title
         self.residents = []
