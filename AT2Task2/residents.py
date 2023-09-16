@@ -40,7 +40,6 @@ class Resident:
     def open_letters(self):
         self.waiting = False
 
-
     def deposit_letters(self, postoffice):
         if self.written_letters:
             for letter in self.written_letters:
@@ -48,11 +47,11 @@ class Resident:
             self.written_letters = []
             self.waiting = True
 
-    def check_letterbox(self, letterbox):
+    def check_letterbox(self, letterbox, decryption_level=0):
         moved_letters = []
         if letterbox.has_letters():
             for letter in letterbox.letters:
-                letter.read_letter()
+                letter.read_letter(level=decryption_level)
                 self.owned_letters.append(letter)
                 moved_letters.append(letter)
                 letterbox.empty_letterbox()
